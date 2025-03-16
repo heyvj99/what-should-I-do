@@ -31,7 +31,7 @@ function App() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="max-w-[600px] w-full bg-white rounded-xl shadow-lg p-8 space-y-8">
         <h1 className="text-3xl font-mono text-center font-bold text-gray-800">
-          Boredom Buster
+          I am bored!!!!
         </h1>
         
         <div className="flex justify-center">
