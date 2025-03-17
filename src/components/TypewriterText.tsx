@@ -29,7 +29,25 @@ export function TypewriterText({ text, delay = 1000, className = '' }: Typewrite
         }
       };
 
-      timeout = window.setTimeout(typeNextChar, delay);
+      // Same implementation with setInterval. Important to remember that the function to run in 
+      //intervals in the callfact given to set interval itself
+      // const typeNextChar = () => {
+      //   let interval = setInterval(() => {
+      //     if (currentIndex < text.length) {
+      //       setDisplayText((prev) => prev + text[currentIndex]); // Append next character
+      //       currentIndex++;
+      //     } else {
+      //       clearInterval(interval); // Stop interval when typing is complete
+      //       setIsTyping(false);
+      //     }
+      //   }, 60);
+      // };
+
+
+      // above you have defined what typeNextCharacter does but you have not called it yet.
+      // You call it for the first time in the following line and the purpose of delay is 
+      // the time between clicking refresh and starting to type
+      timeout = window.setTimeout(typeNextChar, delay); 
     };
 
     setDisplayText('');
@@ -44,7 +62,7 @@ export function TypewriterText({ text, delay = 1000, className = '' }: Typewrite
   return (
     <div 
       className={`
-        font-mono text-xl ${className} min-h-[4rem]
+        font-mono text-xl ${className} min-h-[15rem] sm:min-h-[10rem] md:min-h-[8rem] lg:min-h-[5rem]
         transition-opacity duration-300
         ${isFading ? 'opacity-0' : 'opacity-100'}
       `}

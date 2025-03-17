@@ -30,11 +30,22 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="max-w-[600px] w-full bg-white rounded-xl shadow-lg p-8 space-y-8">
-        <h1 className="text-3xl font-mono text-center font-bold text-gray-800">
+        {/* <h1 className="text-3xl font-mono text-center font-bold text-gray-800">
           I am bored!!!!
-        </h1>
+        </h1> */}
         
-        <div className="flex justify-center">
+        
+
+        {currentActivity && (
+          <div className="bg-gray-50 rounded-lg p-6 transition-all duration-300">
+            <TypewriterText 
+              text={currentActivity}
+              className="text-start text-gray-800"
+            />
+          </div>
+        )}
+
+<div className="flex justify-center">
           <button
             onClick={getRandomActivity}
             disabled={isLoading}
@@ -64,14 +75,6 @@ function App() {
           </button>
         </div>
 
-        {currentActivity && (
-          <div className="bg-gray-50 rounded-lg p-6 transition-all duration-300">
-            <TypewriterText 
-              text={currentActivity}
-              className="text-start text-gray-800"
-            />
-          </div>
-        )}
       </div>
     </div>
   );
