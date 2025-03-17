@@ -52,7 +52,7 @@ export const activities = [
   "Create a vision board (digital or paper) for your next big goal 📌",
   "Look up design inspiration on Pinterest or Dribbble 🎨",
   "Rewatch an episode of a comfort show or a funny YouTube video 📺",
-  "Give yourself a quick DIY spa session (face mask, hand massage, etc.) 💆‍♀️"
+  "Give yourself a quick DIY spa session (face mask, hand massage, etc.) 💆‍♀️",
 
   // 🎨 Productive Activities for a Product Designer  
   "Analyze a top-tier product and break down its UX/UI 🧐",
@@ -125,5 +125,5 @@ export const activities = [
   "Learn about a recent breakthrough in AI or machine learning 🤖",
   "Take a short online course or lesson on an unfamiliar tech topic 🎓",
   "Explore an open-source project and see how it works 🔍"
-  
+
 ];
